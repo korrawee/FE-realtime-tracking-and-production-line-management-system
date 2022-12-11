@@ -1,0 +1,13 @@
+current directory: /Users/korraweesomyos/Dev/wongshare2/frontend/vendor/bundle/ruby/2.7.0/gems/json-2.6.3/ext/json
+/Users/korraweesomyos/.rvm/rubies/ruby-2.7.5/bin/ruby -I /Users/korraweesomyos/.rvm/rubies/ruby-2.7.5/lib/ruby/2.7.0 -r ./siteconf20221206-31330-147pemb.rb extconf.rb
+creating Makefile
+
+current directory: /Users/korraweesomyos/Dev/wongshare2/frontend/vendor/bundle/ruby/2.7.0/gems/json-2.6.3/ext/json
+make "DESTDIR=" clean
+
+current directory: /Users/korraweesomyos/Dev/wongshare2/frontend/vendor/bundle/ruby/2.7.0/gems/json-2.6.3/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /Users/korraweesomyos/Dev/wongshare2/frontend/vendor/bundle/ruby/2.7.0/gems/json-2.6.3/ext/json
+make "DESTDIR=" install
