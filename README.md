@@ -13,7 +13,7 @@ Install the dependencies and devDependencies and start the server.
 ```sh
 cd FE-realtime-tracking-and-production-line-management-system
 npm i
-# run this if want to run ios emulator
+# run this if you want to run ios emulator
 cd ios
 pod install
 ```
