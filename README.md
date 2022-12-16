@@ -33,10 +33,37 @@ npm run ios
 npm run android
 ```
 
-## Can't run app in android enulator? Try this.
+## Can't run app in android emulator? Try this.
+-Method 1-
 - Delete ```node modules``` folder in your project.
 - Delete build folder in ```android/build```
 - Close all running terminals.
 - Make sure you have installed adb drivers in your environment. If not install ```adb``` drivers. ([For macOS](https://stackoverflow.com/a/32314718/7867613) / [For Windows](https://adb.clockworkmod.com/))
 - Open new terminal window and in your project folder run ```npm cache clean --force ; npm install``` to re-install node modules.
 - Finally run your app using ```npm run android ```
+
+-Method 2-
+    Ubuntu OS
+    1. Check path in .bashrc
+        ```sh
+        # Try use 'cd' command to check there exists? if not find your path of this folder and replace it
+        export ANDROID_HOME=$HOME/Android/Sdk
+        export PATH=$PATH:$ANDROID_HOME/emulator:$PATH
+        export PATH=$PATH:$ANDROID_HOME/platform-tools:$PATH
+        export PATH=$PATH:$ANDROID_HOME/tools:$PATH
+        export PATH=$PATH:$ANDROID_HOME/tools/bin:$PATH
+
+        ```
+    2. if found 'React Native Task :app:validateSigningDebug FAILED' open terminal in /(your project path)/android/app and run this command
+        ```sh
+        keytool -genkey -v -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000
+        
+        ```
+    Then go back to /(your project path) and run:
+        ```sh
+        npm i
+
+        npx react-native start
+
+        npx react-native run-android
+        ```
